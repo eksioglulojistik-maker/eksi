@@ -1,0 +1,68 @@
+EKŞİOĞLU — V3.6.47 → V3.6.48
+
+Bu işlem eski imzalama anahtarı kayıp olduğu için iki aşamalıdır.
+Özel anahtar hiçbir yükleme dosyasına dahil değildir.
+Canlıya henüz kurulum yapılmadı.
+
+ÖNCE
+1. Canlı panel → Sistem ve Yönetim → Sürüm Doğrulama.
+   Kurulu sürüm 3.6.47 ve tüm 164 dosya Eşleşiyor olmalı.
+   Sürüm farklıysa veya eşleşmeyen dosya varsa DURUN; bu dosyaları yüklemeyin.
+2. cPanel'den dosya ve veritabanı yedeği alın. Yedeği bilgisayarınıza indirin
+   veya web kökü dışında saklayın. Herkese açık panel klasörüne yedek koymayın.
+3. En az şu 6 dosyanın kurulum öncesi kopyalarını ayrıca koruyun:
+   finance-hub.php
+   settings-hub.php
+   inc/layout.php
+   inc/update-signature.php
+   inc/release-manifest.php
+   .eksioglu-installed-version
+   Son dosya gizlidir: cPanel Dosya Yöneticisi → Ayarlar → Gizli dosyaları göster.
+   İşlem sırasında panelde başka güncelleme başlatmayın.
+
+ADIM 1 — cPANEL DOSYA YÖNETİCİSİ
+4. cPanel → Alan Adları bölümünde panel.eksioglulojistik.com alanının
+   Belge Kökü / Document Root klasörünü açın. İçinde login.php, inc ve assets
+   bulunmalı. Yanlışlıkla inc klasörünün içine girmeyin.
+5. ADIM-1-ANAHTAR-YENILEME-3647.zip dosyasını bu panel ana klasörüne yükleyin.
+6. ZIP'i seçin → Çıkart / Extract. Hedef AYNI panel ana klasörü olmalı.
+   İki dosya yerini alır:
+   inc/update-signature.php
+   inc/release-manifest.php
+   Bu ZIP'i panelin Sistem Güncellemeleri ekranına yüklemeyin.
+7. Yaklaşık 10 saniye bekleyin, panelde Sürüm Doğrulama sayfasını yenileyin.
+   Hâlâ 3.6.47, 164/164 eşleşme ve build 1d154f5de61608d3 beklenir.
+   Eşleşme yoksa ADIM 2'ye geçmeyin. Önce bu iki dosyanın yedeklerini geri koyun.
+8. Yüklenen ADIM-1 ZIP'ini cPanel'deki panel klasöründen silin.
+
+ADIM 2 — PANELİN GÜNCELLEME EKRANI
+9. Panel → Sistem ve Yönetim → Sistem Güncellemeleri.
+10. Dosya Seç → EKSIOGLU-Panel-3.6.48-Menu-Duzeltmeleri.zip.
+11. Güncellemeyi Yükle ve Kur düğmesine basın. Başarılı sonuç 3.6.48 demeli.
+    Güncelleyici kendi dosya/SQL yedeğini de web kökünün üstünde oluşturur.
+12. Yaklaşık 10 saniye bekleyin. Sürüm Doğrulama sayfasında:
+    kurulu sürüm 3.6.48, 164/164 eşleşme, build cd227a987c1e34e4 beklenir.
+13. Ctrl+F5 yapın. Yönetici hesabıyla taşınma dosyaları/hesap menüsünü;
+    varsa personel hesabıyla finans ve ayarlar bağlantılarını kontrol edin.
+    Kontrol için gerçek müşteri kaydı değiştirmeyin veya mesaj göndermeyin.
+
+GERİ ALMA
+Yalnız ADIM 1 yapıldıysa iki özgün inc dosyasını geri koyun.
+ADIM 2 de yapıldıysa yukarıdaki 6 dosyanın kurulum öncesi kopyalarını
+cPanel üzerinden tam olarak eski yerlerine geri koyun. 10 saniye sonra
+V3.6.47/build 805401cf91f0d666 ve 164/164 eşleşmeyi doğrulayın.
+Bu güncelleme SQL değişikliği içermez; bu geri almada müşteri veritabanı
+GERİ YÜKLENMEZ. Bir hata olursa yeni denemeler yapmadan hata metnini paylaşın.
+
+TEST KANITI
+İzole PHP 8.1/MySQL ortamında gerçek güncelleme ekranı kullanıldı:
+26 güncelleme/anahtar yenileme/geri alma kontrolü geçti.
+Önceki kod kontrolleri: 69 HTTP + 34 mobil + 18 şablon testi geçti.
+Canlıdaki kurulum henüz doğrulanmadı; bu sonuçlar test ortamına aittir.
+
+SONRAKİ PAKETLER İÇİN
+Yeni özel anahtar yerel bulut ortamında korundu; ZIP'lerde bulunmaz.
+Bu ortamın ayarlarında kaydedilen değişiklikleri inceleyip kaydedin ve ortamı
+yayımlayın. Böylece hazırlanan ortamın saklanması sağlanır. Taslak kaydı tek
+başına yayın değildir; yeni görevde anahtar erişimi ayrıca kontrol edilmelidir.
+Anahtar içeriğini sohbete, GitHub'a veya canlı panel klasörüne koymayın.
