@@ -1,0 +1,19 @@
+/* Shared compact corporate interface */
+:root{--panel-ink:#142b49;--panel-border:#dce4ee;--panel-accent:#193e70}
+body.ex-app{background:#f3f6fa;color:var(--panel-ink);font-family:Arial,Helvetica,sans-serif;font-size:14px}
+.ex-app .ex-content{max-width:1500px;padding:22px 26px 40px}
+.ex-app .ex-header{min-height:72px}.ex-app h1{font-size:25px;line-height:1.3}.ex-app h2{font-size:18px}
+.ex-app .card,.ex-app .panel,.ex-app .v11-card,.ex-app .mq-card,.ex-app .hub-card,.ex-app .ct-card{border-radius:10px;border:1px solid var(--panel-border);box-shadow:0 2px 8px #16314b05}
+.ex-app input:not([type=checkbox]):not([type=radio]):not([type=color]),.ex-app select,.ex-app textarea{max-width:100%;border-radius:7px;border:1px solid #c8d4e2;background:#fff;color:#142b49;padding:10px 12px;font-size:14px}
+.ex-app :focus-visible{outline:3px solid #81acdf;outline-offset:2px}
+.ex-app table th{font-size:11px;letter-spacing:.3px;background:#f7f9fc;color:#546880}.ex-app table td{font-size:13px}
+
+[hidden]{display:none!important}.ek-richedit{font-weight:400;min-height:130px;max-height:450px;overflow:auto}.ek-richedit p{margin:0 0 8px}.ek-richbar{flex-wrap:wrap}
+.ex-app .ex-welcome{padding:25px}.ex-app .ex-welcome h1{font-size:29px}.ex-app .ex-stat{padding:19px}.ex-app .ex-stat strong{font-size:30px}
+@media(max-width:1100px){.ex-app .mq-layout{grid-template-columns:1fr}}
+@media(max-width:700px){.ex-app .ex-content{padding:16px 12px}.ex-app h1{font-size:22px}}
+@media print{.ex-sidebar,.ex-header,.ex-contextbar,.v12-toolbar,.no-print{display:none!important}.ex-shell,.ex-content{display:block!important;margin:0!important;padding:0!important;width:100%!important;max-width:none!important}}
+.ex-app .ek-richbar{display:flex!important;align-items:center!important;gap:6px!important;flex-wrap:wrap!important}
+.ex-app .ek-richbar button{width:auto!important;min-width:30px!important;padding:6px 9px!important;margin:0!important;flex:0 0 auto!important}
+.ex-app .ek-richbar select{width:94px!important;min-width:0!important;padding:5px!important;margin:0!important;flex:0 0 94px!important;height:31px!important}
+.ex-app .ek-richbar input[type=color]{width:38px!important;min-width:38px!important;height:31px!important;padding:2px!important;margin:0!important;flex:0 0 38px!important}

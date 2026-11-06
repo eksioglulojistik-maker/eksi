@@ -1,0 +1,15 @@
+(()=>{'use strict';
+const paths={"quote.php":"quotes.php","view.php":"quotes.php","quote-details.php":"quotes.php","quote-actions.php":"quotes.php","v11-tracking.php":"quotes.php","v11-revision.php":"quotes.php","v11-print.php":"quotes.php","v112-mail.php":"quotes.php","customer-detail.php":"customers.php","customers.php":"index.php","quotes.php":"index.php","templates.php":"settings-hub.php","template-studio.php":"templates.php","v11-inventory.php":"index.php","v11-calendar.php":"index.php","v11-documents.php":"index.php","settings.php":"settings-hub.php","emails.php":"settings-hub.php","transport.php":"settings-hub.php","update-manager.php":"settings-hub.php"};
+const current=location.pathname.split('/').pop()||'index.php';if(current==='index.php'||current==='login.php')return;
+const content=document.querySelector('section.content')||document.querySelector('.content');if(!content)return;
+const safeUrl=(raw)=>{try{let u=new URL(raw,location.href);return u.origin===location.origin&&u.pathname.startsWith(location.pathname.slice(0,location.pathname.lastIndexOf('/')+1))?u.href:null}catch{return null}};
+const fallback=paths[current]||'index.php';let back=safeUrl(document.referrer);if(!back||back===location.href)back=fallback;
+const bar=document.createElement('div');bar.className='v1111-toolbar';bar.setAttribute('aria-label','Sayfa işlemleri');
+const a=(label,url,cls)=>{const e=document.createElement('a');e.textContent=label;e.href=url;e.className='v1111-btn '+(cls||'');return e};
+bar.append(a('← Geri Dön',back),a('⌂ Ana Sayfa','index.php','v1111-light'));
+const forms=[...content.querySelectorAll('form')].filter(f=>f.querySelector('input:not([type=hidden]),textarea,select'));
+const edit=forms.find(f=>{const m=(f.getAttribute('method')||'get').toLowerCase();return m==='post'&&f.querySelector('input[type=submit],button[type=submit],button:not([type])')});
+if(edit){const cancel=a('Vazgeç',fallback,'v1111-light');bar.append(cancel);let dirty=false;edit.querySelectorAll('input,textarea,select').forEach(el=>{if(el.type!=='hidden')el.addEventListener('input',()=>dirty=true)});edit.addEventListener('submit',()=>dirty=false);const check=async e=>{if(!dirty)return;const target=e.currentTarget.href;e.preventDefault();if(await window.ekConfirm('Kaydedilmemiş değişiklikler var. Sayfadan çıkılsın mı?')){dirty=false;document.dispatchEvent(new Event('ek-confirmed-navigation'));location.assign(target)}};bar.querySelectorAll('a').forEach(el=>el.addEventListener('click',check));}
+const head=content.querySelector('.v5-pagehead,.page-head,.pagehead');if(head&&head.nextSibling)head.parentNode.insertBefore(bar,head.nextSibling);else content.insertBefore(bar,content.firstChild);
+// Existing delete actions remain server-owned; no GET-based or client-side fake deletion is introduced.
+})();

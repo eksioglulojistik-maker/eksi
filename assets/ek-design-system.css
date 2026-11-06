@@ -1,0 +1,55 @@
+/* EKŞİOĞLU — Phase 2, scoped visual foundation; no global h1/button overrides. */
+body.ek-design-v2 {
+ --ek-navy:#0f2742;--ek-primary:#1d4ed8;--ek-text:#0f172a;
+ --ek-muted:#475569;--ek-bg:#f8fafc;--ek-white:#fff;
+ --ek-border:#cbd5e1;--ek-ring:#2563eb;
+ --ek-radius:12px;--ek-space:8px;
+ background:var(--ek-bg);color:var(--ek-text);
+ font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+ font-size:15px;line-height:1.5;
+}
+body.ek-design-v2 *,body.ek-design-v2 *::before,body.ek-design-v2 *::after {box-sizing:border-box}
+body.ek-design-v2 .ex-sidebar{background:var(--ek-navy);width:232px;max-width:85vw}
+body.ek-design-v2 .ex-shell{min-width:0}
+body.ek-design-v2 .ex-header{min-height:64px;height:auto;padding-top:10px;padding-bottom:10px;gap:12px}
+body.ek-design-v2 .ex-header-left,body.ek-design-v2 .ex-header-right{min-width:0;flex-wrap:nowrap}
+body.ek-design-v2 .ex-header-left{flex:1 1 auto}
+body.ek-design-v2 .ex-header-right{flex:0 0 auto;gap:10px}
+body.ek-design-v2 .ex-headings{min-width:0}
+body.ek-design-v2 .ex-headings>span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+body.ek-design-v2 .ex-content{min-width:0;max-width:100%;padding:24px}
+body.ek-design-v2 .ex-nav{gap:5px}
+body.ek-design-v2 .ex-nav>a{min-height:44px;border-radius:10px;line-height:1.35}
+body.ek-design-v2 .ex-nav>a.active{font-weight:700}
+body.ek-design-v2 .ex-contextbar{min-height:48px;align-items:center;gap:12px}
+body.ek-design-v2 .ex-contextbar a,body.ek-design-v2 .ex-contextbar button{min-height:36px}
+body.ek-design-v2 .ex-content :is(input,select,textarea){max-width:100%;font:inherit}
+body.ek-design-v2 .ex-content :is(input,select,textarea):focus-visible{outline:3px solid var(--ek-ring);outline-offset:2px}
+body.ek-design-v2 :is(a,button,[role="button"]):focus-visible{outline:3px solid #93c5fd;outline-offset:3px}
+body.ek-design-v2 .ex-content :is(table){max-width:100%;font-variant-numeric:tabular-nums}
+body.ek-design-v2 .ex-content :is(td,th){overflow-wrap:anywhere}
+body.ek-design-v2 .ex-content :is(.card,.ex-card,.ek-card){border-radius:var(--ek-radius)}
+body.ek-design-v2 .ex-content :is(.ex-card,.ek-card) :is(p,small){overflow-wrap:anywhere}
+body.ek-design-v2 .ex-content :is(.ek-page-intro,.ek-workdesk-header){height:auto;min-height:unset;align-items:flex-start}
+body.ek-design-v2 .ex-content :is(.ek-page-intro,.ek-workdesk-header) p{line-height:1.55}
+body.ek-design-v2 .ex-content :is(.ek-page-intro,.ek-workdesk-header) h1{line-height:1.25}
+body.ek-design-v2 .ex-content :is(.ex-table-wrap,.table-responsive,.table-wrap){max-width:100%;overflow-x:auto}
+body.ek-design-v2 .ex-content :is(.ex-muted,.ek-muted,.text-muted){color:var(--ek-muted)}
+body.ek-design-v2 .ex-header :is(.ex-top-cta,.ek-command-open){min-height:40px;display:inline-flex;align-items:center;justify-content:center}
+body.ek-design-v2 .ek-skip-link{position:fixed;left:12px;top:-90px;z-index:99999;background:#fff;color:#0f2742;border:2px solid #2563eb;border-radius:8px;padding:12px 16px;text-decoration:none}
+body.ek-design-v2 .ek-skip-link:focus{top:12px}
+@media(min-width:1024px){body.ek-design-v2 .ex-shell{margin-left:232px}}
+@media(max-width:1023px){body.ek-design-v2 .ex-content{padding:16px}body.ek-design-v2 .ex-header-date{display:none}}
+@media(max-width:767px){
+ body.ek-design-v2 .ex-content{padding:12px}
+ body.ek-design-v2 .ex-header{padding:8px 12px;gap:8px;align-items:center}
+ body.ek-design-v2 .ex-header-left,body.ek-design-v2 .ex-header-right{gap:8px}
+ body.ek-design-v2 .ex-header :is(.ex-hamburger,.ek-command-open,.ek-bell){width:44px;min-width:44px;height:44px;min-height:44px;flex:0 0 44px;padding:0;align-items:center;justify-content:center}
+ body.ek-design-v2 .ex-hamburger{display:inline-flex}
+ body.ek-design-v2 .ex-header-right .ek-command-open span{display:none}
+ body.ek-design-v2 .ex-header-right .ex-top-cta{display:none}
+ body.ek-design-v2 .ex-header-right .ek-command-open kbd{display:none}
+ body.ek-design-v2 .ex-contextbar{padding:10px 12px}
+ body.ek-design-v2 .ex-content :is(.ek-page-intro,.ek-workdesk-header){padding:16px}
+}
+@media print{body.ek-design-v2 .ek-skip-link{display:none!important}body.ek-design-v2 .ex-sidebar,body.ek-design-v2 .ex-header,body.ek-design-v2 .ex-contextbar{display:none!important}body.ek-design-v2 .ex-shell{margin:0!important}body.ek-design-v2 .ex-content{padding:0!important}}

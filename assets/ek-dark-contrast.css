@@ -1,0 +1,51 @@
+/* EKŞİOĞLU V3.2.5: dark-surface contrast repair.
+   Scoped overrides; no blanket text recoloring of light controls. */
+:root{--ek-dark-text:#f5f8fd;--ek-dark-muted:#c4d4e7}
+body.ex-app :is(.ex-sidebar,.v5-side,.ex-welcome,.v5-inventory-summary,.mv6-total,.mv6-dochero){
+ color:var(--ek-dark-text)!important;
+}
+body.ex-app :is(.ex-sidebar,.v5-side,.ex-welcome,.v5-inventory-summary,.mv6-total,.mv6-dochero)
+ :is(h1,h2,h3,h4,h5,h6,p,strong,b,small,em,li,dt,dd,label){
+ color:inherit!important;
+}
+body.ex-app :is(.ex-sidebar,.v5-side,.ex-welcome,.v5-inventory-summary,.mv6-total,.mv6-dochero)
+ :is(a:not(.btn):not(.button),span:not(.tag):not(.badge):not(.v5-status):not(.ex-nav-icon)){
+ color:inherit;
+}
+body.ex-app :is(.ex-sidebar,.v5-side) :is(.ex-nav a,nav a,.ex-account,.ex-brand,.ex-brand-sub,.ex-sidebar-bottom){
+ color:#e6effb!important;
+}
+body.ex-app :is(.ex-sidebar,.v5-side) :is(.ex-nav a.active,.ex-nav a:hover,nav a.active,nav a:hover){
+ color:#fff!important;
+}
+body.ex-app :is(.ex-sidebar,.v5-side) :is(.ex-menu-title,.ex-brand-sub small,.ex-account small){
+ color:#b9cce2!important;
+}
+body.ex-app .ex-welcome :is(p,small){color:#d8e7f7!important}
+body.ex-app .v5-inventory-summary :is(h1,h2,h3,strong,b,p,small,span){color:#f5f8fd!important}
+body.ex-app .mv6-total :is(strong,b,small,span,p){color:#f7faff!important}
+body.ex-app .mv6-dochero :is(h1,h2,h3,strong,b,small,span,p){color:#f7faff!important}
+/* Preserve contrast on intentionally light controls inside dark sections */
+body.ex-app :is(.ex-sidebar,.v5-side,.ex-welcome,.v5-inventory-summary,.mv6-total,.mv6-dochero)
+ :is(input,select,textarea,option){
+ color:#1d344e!important;background-color:#fff!important;
+}
+body.ex-app :is(.ex-sidebar,.v5-side,.ex-welcome,.v5-inventory-summary,.mv6-total,.mv6-dochero)
+ :is(input,textarea)::placeholder{color:#647b93!important}
+body.ex-app .v5-inventory-summary button{background:#fff!important;color:#17335f!important}
+body.ex-app .mv6-dochero .btn.secondary,body.ex-app .mv6-total .btn.secondary{color:#254369!important;background:#e9eff8!important}
+/* Dark banner components created in the newer workdesk UI */
+body.ex-app :is(.ek-workdesk-hero,.ek-dark-hero,.ek-dark-panel,.ek-banner-dark,.ek-hero-dark){
+ color:#f5f8fd!important;
+}
+body.ex-app :is(.ek-workdesk-hero,.ek-dark-hero,.ek-dark-panel,.ek-banner-dark,.ek-hero-dark)
+ :is(h1,h2,h3,h4,p,small,strong,b,span){color:inherit!important}
+body.ex-app :is(.ek-workdesk-hero,.ek-dark-hero,.ek-dark-panel,.ek-banner-dark,.ek-hero-dark)
+ :is(input,select,textarea){color:#1d344e!important;background:#fff!important}
+/* Dark primary buttons need light labels, even under global text rules */
+body.ex-app :is(.ex-top-cta,.ek-action-primary,.btn.primary,button.primary,.ek-global-search button){
+ color:#fff!important;
+}
+body.ex-app :is(.ex-top-cta,.ek-action-primary,.btn.primary,button.primary,.ek-global-search button)
+ :is(span,strong,b,small){color:inherit!important}
+@media print{body.ex-app .mv6-dochero,body.ex-app .mv6-total{-webkit-print-color-adjust:exact;print-color-adjust:exact}}

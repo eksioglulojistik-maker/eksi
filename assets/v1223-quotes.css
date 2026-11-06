@@ -1,0 +1,108 @@
+/* EKŞİOĞLU quote list - scoped to this page, no global layout overrides */
+.eq-page{padding:4px 0 32px;color:#142a46;font-family:inherit}.eq-page *{box-sizing:border-box}.eq-heading{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-bottom:22px}.eq-eyebrow{font-size:10px;letter-spacing:.13em;font-weight:800;color:#3970ac}.eq-heading h1{font-size:27px;line-height:1.2;margin:5px 0 4px;color:#0d2848}.eq-heading p{font-size:13px;color:#475569;margin:0}.eq-top-actions{display:flex;gap:8px;flex-wrap:wrap}.eq-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:9px;border:1px solid #d9e2ef;padding:10px 15px;font-size:12px;font-weight:750;text-decoration:none;cursor:pointer;white-space:nowrap;min-height:39px}.eq-btn-primary{background:#1665d8;border-color:#1665d8;color:white!important}.eq-btn-outline{background:#fff;color:#1b416d!important}.eq-metrics{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin-bottom:13px}.eq-metric{min-width:0;background:#fff;border:1px solid #e4eaf2;border-left:4px solid #2475e7;border-radius:13px;padding:16px 16px 14px;box-shadow:0 4px 15px rgba(15,37,65,.045);position:relative;min-height:84px}.eq-metric>span{display:block;font-size:11px;color:#475569;font-weight:700;letter-spacing:.02em;margin:0 36px 3px 0}.eq-metric strong{display:block;font-size:29px;line-height:1.25;letter-spacing:-.025em;color:#122944}.eq-metric small{display:block;color:#475569;font-size:10px;margin-top:6px}.eq-metric-icon{position:absolute;right:13px;top:13px;width:31px;height:31px;border-radius:9px;background:#edf4ff;color:#2167bb;display:grid;place-items:center;font-size:19px;font-weight:800}.eq-amber{border-left-color:#f1b300}.eq-amber .eq-metric-icon{background:#eff6ff;color:#1d4ed8}.eq-green{border-left-color:#22a65c}.eq-green .eq-metric-icon{background:#e5f8ed;color:#17814b}.eq-orange{border-left-color:#f58a25}.eq-orange .eq-metric-icon{background:#fff0e1;color:#bc6515}.eq-slate{border-left-color:#758392}.eq-slate .eq-metric-icon{background:#edf0f4;color:#586777}.eq-value-line{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:12px;background:#f6f9fd;border:1px solid #e2eaf3;border-radius:9px;padding:10px 14px;margin-bottom:16px}.eq-value-line b{color:#647a93}.eq-value-line>span{font-weight:800;color:#123d72}.eq-value-line small{color:#475569}.eq-separator{padding:0 7px;color:#b5c1d1}.eq-filters{display:flex;gap:12px;align-items:end;background:#fff;border:1px solid #e4eaf2;border-radius:13px;padding:16px;margin-bottom:18px;box-shadow:0 4px 13px rgba(15,37,65,.035)}.eq-filters label{display:flex;flex-direction:column;gap:7px;flex:0 1 240px;min-width:150px}.eq-filters label>span{font-size:12px;font-weight:700;color:#4c627d}.eq-filters .eq-filter-search{flex:1 1 340px}.eq-filters select,.eq-filters input{width:100%;border:1px solid #d9e2ec;border-radius:8px;padding:10px 12px;background:white;color:#17334e;font-size:13px;min-height:40px;outline-offset:2px}.eq-list{background:white;border:1px solid #e3eaf3;border-radius:13px;overflow:hidden;box-shadow:0 4px 15px rgba(15,37,65,.04)}.eq-list-title{padding:17px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}.eq-list-title h2{font-size:16px;margin:0;color:#102d4c}.eq-list-title p{font-size:11px;color:#475569;margin:3px 0 0}.eq-list-label{font-size:10px;letter-spacing:.08em;font-weight:800;color:#475569}.eq-table-wrap{overflow-x:auto;max-width:100%}.eq-table{width:100%;border-collapse:collapse;min-width:1060px;font-size:12px}.eq-table thead{background:#f5f8fc}.eq-table th{text-align:left;padding:13px 12px;color:#667d97;font-size:10px;text-transform:uppercase;letter-spacing:.035em;border-top:1px solid #e6edf5;border-bottom:1px solid #e6edf5}.eq-table td{padding:13px 12px;border-bottom:1px solid #edf1f6;vertical-align:middle;color:#19324e}.eq-table tbody tr:hover{background:#fafcff}.eq-table tbody tr:last-child td{border-bottom:0}.eq-table td b{font-size:12px;font-weight:750}.eq-table td small{display:block;color:#475569;font-size:10px;margin-top:4px;overflow-wrap:anywhere}.eq-quote-id a{font-weight:850;color:#1265c9;text-decoration:none}.eq-route{min-width:160px}.eq-route span{display:block;max-width:200px;overflow-wrap:anywhere;font-weight:650}.eq-route i{display:block;font-style:normal;color:#a1b1c2;margin:3px 0}.eq-mode{display:inline-block;color:#506780;white-space:nowrap}.eq-volume{font-weight:700;white-space:nowrap}.eq-price{white-space:nowrap}.eq-status{display:inline-block;margin-top:7px;padding:4px 9px;border-radius:99px;background:#edf2f8;color:#526b86;font-size:10px;font-weight:850;white-space:nowrap}.eq-status-accepted{background:#e4f6e9;color:#16753e}.eq-status-sent{background:#e4f5fb;color:#15728e}.eq-status-rejected,.eq-status-expired{background:#ffeceb;color:#b43d37}.eq-status-draft{background:#eef2fa;color:#466caa}.eq-status-priced{background:#eff6ff;color:#1d4ed8}.eq-actions{display:flex;align-items:center;gap:6px;flex-wrap:wrap;min-width:190px}.eq-actions form{display:inline;margin:0}.eq-action{border:1px solid #dce5f0;background:#fff;border-radius:7px;padding:8px 9px;display:inline-flex;gap:5px;align-items:center;justify-content:center;font-size:11px;font-weight:750;text-decoration:none;cursor:pointer;white-space:nowrap;line-height:1.2}.eq-edit{background:#1769dc;border-color:#1769dc;color:white!important}.eq-view{color:#2168c0!important}.eq-delete{border-color:#f5cdd0;color:#c3313e;background:#fff8f8}.eq-restore{color:#1b7e4d;background:#f0fcf4;border-color:#bce7c9}.eq-empty{text-align:center;padding:32px!important;color:#8191a5!important}@media(max-width:850px){.eq-heading{align-items:start;flex-direction:column}.eq-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.eq-filters{flex-wrap:wrap}.eq-filters label{flex:1 1 200px}.eq-filters .eq-btn{flex:1 1 90px}.eq-list-label{display:none}}@media(max-width:480px){.eq-metrics{grid-template-columns:1fr 1fr;gap:8px}.eq-metric{padding:13px;min-height:84px}.eq-metric strong{font-size:25px}.eq-metric>span{font-size:10px}.eq-heading h1{font-size:23px}}
+/* V2.2.3 modern corporate quote management */
+.eq-page{--navy:#122d4a;--line:#e2e9f1;max-width:1600px;margin:auto;padding:8px 0 44px;color:var(--navy);font-family:Arial,Helvetica,sans-serif}
+.eq-heading{padding:0 0 12px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+.eq-heading h1{font-size:26px;font-weight:750;letter-spacing:-.6px}
+.eq-heading p{color:#475569}
+.eq-btn{border-radius:7px;box-shadow:none}
+.eq-btn-primary{background:#153b61;border-color:#153b61}
+.eq-btn-primary:hover{background:#24547f}
+.eq-metrics{gap:10px}
+.eq-metric{min-height:84px;padding:10px 14px;border-radius:9px;border:1px solid var(--line);border-top:3px solid #315e86;box-shadow:0 2px 9px rgba(17,44,71,.035)}
+.eq-metric>span{margin-top:6px}
+.eq-metric strong{font-size:26px;letter-spacing:-.6px}
+.eq-metric-icon{background:#f0f4f8!important;color:#46647f!important;border-radius:7px}
+.eq-value-line{background:#f6f8fb;border-radius:8px;border-color:var(--line)}
+.eq-filters{border-radius:9px;box-shadow:none;padding:10px 14px;margin-bottom:13px}
+.eq-filters select,.eq-filters input{border-radius:6px}
+.eq-quick-tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:0 0 13px;overflow-x:auto}
+.eq-quick-tabs a{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:#475569;padding:11px 15px;border-bottom:2px solid transparent;font-size:12px;font-weight:700;white-space:nowrap}
+.eq-quick-tabs a.is-active{color:#163f66;border-bottom-color:#163f66}
+.eq-quick-tabs a:hover{background:#f5f8fb}
+.eq-quick-tabs span{background:#edf2f7;border-radius:5px;padding:2px 6px;font-size:10px}
+.eq-list{border-radius:9px;box-shadow:none;border-color:var(--line)}
+.eq-list-title{padding:19px 20px}
+.eq-table thead{background:#f3f6fa}
+.eq-table th{color:#516a82;padding:14px 13px}
+.eq-table td{padding:15px 13px}
+.eq-table tbody tr:hover{background:#f7fafd}
+.eq-quote-id a{color:#1d568c}
+.eq-customer-link{color:#1c344d;text-decoration:none;font-size:12px;font-weight:750}
+.eq-customer-link:hover,.eq-quote-id a:hover{text-decoration:underline}
+.eq-status{border-radius:5px;padding:5px 8px}
+.eq-actions{gap:5px;min-width:245px}
+.eq-action{border-radius:6px}
+.eq-edit{background:#1a476f;border-color:#1a476f}
+.eq-contract{color:#245778;background:#f0f6fb;border-color:#cfe0ee}
+.eq-contract:hover{background:#e5f0f8}
+
+/* Keep the existing table on desktop and lay out each record as a card on phones. */
+.eq-table td .eq-mobile-label { display: none; }
+
+@media (max-width: 850px) {
+  .eq-table-wrap { overflow: visible; }
+  .eq-table,
+  .eq-table tbody { display: block; width: 100%; min-width: 0; }
+  .eq-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .eq-table .eq-quote-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 10px 12px;
+    margin: 0 10px 10px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: #fff;
+  }
+  .eq-table .eq-quote-row > td {
+    display: block;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    overflow-wrap: anywhere;
+  }
+  .eq-table .eq-customer,
+  .eq-table .eq-route,
+  .eq-table .eq-actions-cell { grid-column: 1 / -1; }
+  .eq-table .eq-price-cell { grid-column: 2; grid-row: 1; text-align: right; }
+  .eq-table .eq-mode-cell { grid-column: 1; grid-row: 3; }
+  .eq-table .eq-volume-cell { grid-column: 2; grid-row: 3; text-align: right; }
+  .eq-table .eq-mode { white-space: normal; }
+  .eq-table .eq-route span { max-width: none; }
+  .eq-table .eq-price,
+  .eq-table .eq-status { white-space: normal; }
+  .eq-table td .eq-mobile-label {
+    display: block;
+    margin-bottom: 3px;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 700;
+  }
+  .eq-table .eq-actions-cell {
+    padding-top: 8px;
+    border-top: 1px solid var(--line);
+  }
+  .eq-table .eq-actions { min-width: 0; gap: 6px; }
+  .eq-table .eq-action { min-height: 44px; }
+  .eq-table .eq-empty { display: block; }
+}
+
+.eq-secondary-actions { display: flex; flex-wrap: wrap; gap: 6px; }
+.eq-secondary > summary { cursor: pointer; }
+@media (min-width: 851px) {
+  .eq-secondary[open] > summary { display: none; }
+}
+@media (max-width: 850px) {
+  .eq-secondary { flex: 0 0 100%; }
+  .eq-secondary[open] > summary { margin-bottom: 6px; }
+}

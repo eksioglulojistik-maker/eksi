@@ -1,0 +1,67 @@
+/* EKŞİOĞLU 1.1.18 — genuine module-level visual hierarchy */
+:root{--e18-ink:#172b45;--e18-muted:#64748b;--e18-line:#e3eaf2;--e18-blue:#1c4f8f;--e18-bg:#f4f7fb;--e18-white:#fff;--e18-radius:13px}
+body.v118-app{background:var(--e18-bg)!important;color:var(--e18-ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.008em}
+.v118-app .v115-sidebar{width:232px!important;background:linear-gradient(180deg,#102b4c,#0a1b31)!important}
+.v118-app .v115-main{margin-left:232px!important;min-width:0}
+.v118-app .v115-brand{padding:22px 18px 16px!important;gap:11px!important}
+.v118-app .v115-brand img{object-fit:contain;max-width:100%;height:auto!important;max-height:48px}
+.v118-app .v115-sidebar nav{padding:8px 10px!important}
+.v118-app .v115-sidebar nav a{min-height:39px!important;padding:9px 11px!important;margin:3px 0!important;border-radius:9px!important;font-size:13px!important;gap:10px!important}
+.v118-app .v115-sidebar nav a.active{background:#e8f1ff!important;color:#133a69!important;font-weight:700!important}
+.v118-app .v115-topbar{min-height:70px!important;padding:13px 28px!important;background:#fff!important;border-bottom:1px solid var(--e18-line)!important;box-shadow:none!important}
+.v118-app .v115-heading strong{font-size:18px!important;letter-spacing:-.025em}
+.v118-app .v115-content{padding:22px 28px 50px!important;max-width:1640px;margin:0 auto}
+.v118-app .v117-utility{margin-bottom:13px!important;font-size:12px!important}
+.v118-context{display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0 0 20px;padding:20px 22px;background:#fff;border:1px solid var(--e18-line);border-radius:var(--e18-radius);box-shadow:0 3px 15px rgba(15,35,65,.035)}
+.v118-context-copy{min-width:0}.v118-context-label{font-size:10px;font-weight:800;letter-spacing:.12em;color:#3568a6;text-transform:uppercase;margin-bottom:5px}
+.v118-context h1{font-size:23px!important;font-weight:760!important;letter-spacing:-.04em!important;margin:0 0 5px!important;line-height:1.2!important;color:#142c4c!important}
+.v118-context p{font-size:13px!important;color:var(--e18-muted)!important;line-height:1.5!important;margin:0!important;max-width:760px}
+.v118-context-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.v118-action{display:inline-flex;align-items:center;justify-content:center;min-height:35px;padding:8px 12px;border:1px solid #d7e3f1;background:#fff;border-radius:9px;color:#1a477c!important;text-decoration:none!important;font-weight:650;font-size:12px;white-space:nowrap;cursor:pointer}
+.v118-action.primary{background:#174a86;color:#fff!important;border-color:#174a86}
+.v118-action:hover{filter:brightness(.96)}
+.v118-app :is(.v5-surface,.crm-card,.v11-card,.hub-card,.mq-card,.v5-stat,.v5-chart,.v5-panel){border:1px solid var(--e18-line)!important;border-radius:var(--e18-radius)!important;box-shadow:0 4px 16px rgba(19,43,76,.04)!important;background:#fff}
+.v118-app :is(.v5-surface,.crm-card,.v11-card,.hub-card){padding:20px!important}
+.v118-app :is(.v5-pagehead,.crm-title,.v11-head,.mq-heading){margin-top:0!important;margin-bottom:15px!important}
+.v118-app :is(.v5-pagehead h1,.crm-title h1,.v11-head h1,.mq-heading h1){font-size:20px!important;line-height:1.3!important;letter-spacing:-.03em!important}
+.v118-app :is(input,select,textarea){border:1px solid #d6e1ed!important;border-radius:9px!important;min-height:39px;font-size:13px!important;background-color:#fff}
+.v118-app :is(input,select,textarea):focus{outline:2px solid rgba(33,100,181,.19)!important;outline-offset:1px;border-color:#3975b8!important}
+.v118-app :is(button,.btn,.crm-primary,.crm-secondary,.mq-btn){border-radius:9px!important;font-weight:650!important;transition:background .15s,transform .15s}
+.v118-app :is(button,.btn,.crm-primary,.crm-secondary,.mq-btn):focus-visible{outline:3px solid #83b4f0;outline-offset:2px}
+.v118-app :is(table,.v5-table,.crm-table,.v11-table){width:100%;border-collapse:separate!important;border-spacing:0!important;font-size:12.5px!important}
+.v118-app :is(table,.v5-table,.crm-table,.v11-table) th{font-size:10.5px!important;text-transform:uppercase!important;letter-spacing:.055em!important;color:#59708d!important;background:#f7f9fd!important;padding:12px 13px!important;border-bottom:1px solid var(--e18-line)!important;white-space:nowrap}
+.v118-app :is(table,.v5-table,.crm-table,.v11-table) td{padding:11px 13px!important;border-bottom:1px solid #edf1f6!important;vertical-align:middle}
+.v118-app :is(table,.v5-table,.crm-table,.v11-table) tbody tr:hover{background:#f7faff!important}
+.v118-app :is(.scroll,.crm-table-wrap){overflow-x:auto;max-width:100%}
+/* Quotes */
+body.v118-quotes .v5-pagehead{display:none!important}
+body.v118-quotes .v5-filter{display:flex;gap:10px;flex-wrap:wrap;align-items:end}
+body.v118-quotes .v5-results{font-size:12px;color:#64748b}
+body.v118-quotes .v5-routecell{max-width:270px;line-height:1.5}
+/* New quote */
+body.v118-quote .mq-heading{display:none!important}
+body.v118-quote .mq-layout{gap:18px!important;align-items:start}
+body.v118-quote .mq-steps{background:#fff;border:1px solid var(--e18-line);border-radius:12px;padding:10px!important;margin-bottom:15px!important}
+body.v118-quote .mq-card{padding:22px!important;margin-bottom:16px!important}
+body.v118-quote .mq-cardhead{border-bottom:1px solid var(--e18-line);padding-bottom:13px!important;margin-bottom:17px!important}
+body.v118-quote .mq-fields{gap:13px!important}
+body.v118-quote .mq-routecard{border:1px solid #dbe6f3!important;border-radius:11px!important;background:#fbfdff!important;padding:14px!important}
+/* Customers */
+body.v118-customers .crm-title{display:none!important}
+body.v118-customers .crm-wrap{max-width:none!important}
+body.v118-customers .crm-stats{gap:12px!important}
+body.v118-customers .crm-editor{border-top:3px solid #2c659e!important}
+body.v118-customers .crm-row-actions{display:flex;flex-wrap:wrap;gap:6px}
+/* Inventory, calendar, contracts */
+body.v118-inventory .v11-head,body.v118-calendar .v11-head,body.v118-documents .v11-head{display:none!important}
+body.v118-inventory .v11-fields,body.v118-calendar .v11-fields{gap:12px!important}
+body.v118-documents .v11-actions{display:flex;gap:8px;flex-wrap:wrap}
+/* Settings */
+body.v118-settings .hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px!important}
+body.v118-settings .hub-card{transition:transform .16s,box-shadow .16s!important}
+body.v118-settings .hub-card:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(15,45,80,.09)!important}
+/* Template editors and quote detail: improve consistency without touching forms */
+body.v118-templates :is(.v5-surface,.v11-card),body.v118-view :is(.v5-surface,.v11-card){margin-bottom:14px}
+@media(max-width:1000px){.v118-app .v115-sidebar{width:232px!important}.v118-app .v115-main{margin-left:0!important}.v118-app .v115-content{padding:16px!important}.v118-context{padding:16px;align-items:flex-start;flex-direction:column}.v118-context-actions{justify-content:flex-start}.v118-context h1{font-size:20px!important}}
+@media(max-width:640px){.v118-app .v115-topbar{padding:10px 14px!important}.v118-context-actions{width:100%}.v118-action{flex:1}.v118-app :is(.v5-surface,.crm-card,.v11-card,.hub-card,.mq-card){padding:14px!important}.v118-app :is(table,.v5-table,.crm-table,.v11-table) td{padding:10px!important}}
+@media print{.v118-context,.v117-utility,.v115-sidebar,.v115-topbar{display:none!important}.v118-app .v115-main{margin:0!important}.v118-app .v115-content{padding:0!important}}

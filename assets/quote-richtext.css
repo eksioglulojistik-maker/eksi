@@ -1,0 +1,8 @@
+
+.ek-rich{border:1px solid #cbd5e1;border-radius:10px;overflow:hidden;background:#fff;margin-top:7px}
+.ek-richbar{display:flex;flex-wrap:wrap;gap:5px;padding:8px;background:#f1f5f9;border-bottom:1px solid #dbe3ee;align-items:center}
+.ek-richbar button,.ek-richbar select,.ek-richbar input[type=color]{min-height:32px;border:1px solid #cbd5e1;border-radius:6px;background:white;color:#16365f;padding:4px 8px;font-size:12px;cursor:pointer}
+.ek-richbar button{font-weight:700;min-width:32px}.ek-richbar button:focus-visible{outline:2px solid #2563eb}
+.ek-richedit{min-height:112px;max-height:420px;overflow:auto;padding:12px 14px;line-height:1.65;color:#26374f;outline:none;white-space:pre-wrap;overflow-wrap:anywhere}
+.ek-richedit:focus{box-shadow:inset 0 0 0 2px #91b4e8}.ek-richedit p{margin:0 0 8px}.ek-richedit ul,.ek-richedit ol{padding-left:25px}
+.ek-rich-hint{font-size:11px;color:#475569;margin-top:5px}

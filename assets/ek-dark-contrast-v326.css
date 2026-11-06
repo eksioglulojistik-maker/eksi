@@ -1,0 +1,11 @@
+/* v3.2.8 narrow dark surface contrast; leave button and badge palettes untouched */
+body.ex-app .ex-sidebar{color:#edf4ff}
+body.ex-app .ex-sidebar .ex-nav>a{color:#dce9f8!important}
+body.ex-app .ex-sidebar .ex-nav>a:hover,
+body.ex-app .ex-sidebar .ex-nav>a.active{color:#fff!important}
+body.ex-app .ex-sidebar .ex-menu-title,
+body.ex-app .ex-sidebar .ex-account small{color:#c2d4e8!important}
+body.ex-app .ex-welcome{color:#f5f9ff}
+body.ex-app .ex-welcome> :is(h1,h2,h3,p){color:#f5f9ff}
+body.ex-app :is(.v5-inventory-summary,.mv6-total,.mv6-dochero,.ek-dark-hero,.ek-workdesk-hero,.ek-banner-dark,.ek-hero-dark){color:#f4f8ff}
+body.ex-app :is(.v5-inventory-summary,.mv6-total,.mv6-dochero,.ek-dark-hero,.ek-workdesk-hero,.ek-banner-dark,.ek-hero-dark)>:is(h1,h2,h3,h4,p,small,strong){color:#f4f8ff}

@@ -1,0 +1,52 @@
+
+/* EKŞİOĞLU — NEXT GENERATION DESIGN SYSTEM, v3.2 */
+:root{--next-900:#0a1d31;--next-800:#112b46;--next-700:#1b3d60;--next-500:#2470b6;--next-100:#e9f2fc;--next-bg:#f4f7fb;--next-surface:#fff;--next-border:#e1e9f1;--next-text:#172c43;--next-muted:#687e93;--next-radius:14px}
+html{font-synthesis:none}body.ex-app{background:var(--next-bg)!important;color:var(--next-text)!important;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif!important;font-size:14px;line-height:1.52}
+body.ex-app .ex-sidebar{background:var(--next-900)!important;border:0!important;box-shadow:12px 0 35px #071d2b10!important}
+body.ex-app .ex-brand{display:block!important;padding:18px 12px!important;margin:0 12px 8px!important;border-bottom:1px solid #ffffff19!important}
+body.ex-app .ex-brand img{display:block;width:100%;height:auto;object-fit:contain;max-width:208px;background:#fff;border-radius:8px;padding:8px;box-sizing:border-box;filter:none}
+
+body.ex-app .ex-menu-title{font-size:10px!important;font-weight:800!important;letter-spacing:1.65px!important;color:#88a1b9!important;margin:16px 21px 9px!important;display:flex;justify-content:space-between;align-items:center}
+body.ex-app .ek-version{font-size:9px;border:1px solid #ffffff2a;padding:2px 7px;border-radius:6px;letter-spacing:0;color:#afc4d8}
+body.ex-app .ex-nav{padding:0 12px!important;gap:4px!important}
+body.ex-app .ex-nav>a{min-height:45px!important;padding:10px 12px!important;color:#c1d1e1!important;border:1px solid transparent!important;border-radius:10px!important;font-size:13px!important;font-weight:600!important;transition:background .18s,color .18s,transform .18s}
+body.ex-app .ex-nav>a:hover{background:#ffffff11!important;color:#fff!important;transform:translateX(2px)}body.ex-app .ex-nav>a.active{background:#2372b72c!important;border-color:#4a9ce13d!important;color:#fff!important;box-shadow:inset 3px 0 #63a9e7!important}
+body.ex-app .ex-nav-icon{font-size:18px!important;display:inline-grid;place-items:center;min-width:26px!important;color:#9dbbda}
+body.ex-app .ex-sidebar-bottom{border-top:1px solid #ffffff18!important;background:#09192a45!important}
+body.ex-app .ex-header{background:#fff!important;border-bottom:1px solid var(--next-border)!important;box-shadow:none!important;min-height:78px!important}
+body.ex-app .ex-headings>span{color:#8191a4!important;font-size:11px!important}body.ex-app .ex-headings strong{color:#162e47!important;font-size:19px!important;font-weight:750!important;letter-spacing:-.5px}
+body.ex-app .ex-content{width:100%!important;max-width:1700px!important;margin:0 auto!important;padding-top:24px!important;padding-bottom:65px!important}
+body.ex-app .ex-contextbar{background:transparent!important;border-bottom:1px solid var(--next-border)!important;padding-bottom:17px!important;margin-bottom:24px!important}
+body.ex-app .ex-context-left{font-size:12px!important;color:#8293a6!important}body.ex-app .ex-context-left a{color:#5b7997!important}
+body.ex-app .ex-context-actions{gap:8px!important}body.ex-app .ex-context-actions :is(a,button){border:1px solid #dbe6f1!important;background:#fff!important;border-radius:9px!important;color:#24476a!important;min-height:36px!important;padding:8px 12px!important;font-size:12px!important;font-weight:700!important;box-shadow:0 2px 6px #19385805!important}
+body.ex-app .ex-context-actions :is(a,button):hover{background:#eef6ff!important;border-color:#9ac2e6!important}
+body.ex-app .ex-top-cta{background:#1763a3!important;border:1px solid #1763a3!important;color:#fff!important;border-radius:10px!important;box-shadow:0 5px 13px #1763a324!important;font-weight:750!important}
+body.ex-app .ex-top-cta:hover{background:#0e4c83!important}
+body.ex-app .ek-command-open{background:#f4f7fb!important;border:1px solid #e2e9f1!important;color:#607a93!important;border-radius:10px!important}
+body.ex-app .ek-bell{background:#f1f6fb!important;border:1px solid #e2ebf4!important}
+body.ex-app :is(.ex-card,.ex-panel,.ex-stat,.card,.panel,.box,.ek-card){border-radius:var(--next-radius)!important}
+body.ex-app :is(.ex-panel,.ex-stat,.card,.panel,.ek-card){background:#fff!important;border:1px solid var(--next-border)!important;box-shadow:0 6px 25px #1b385c08!important}
+body.ex-app .ex-welcome{border-radius:17px!important;box-shadow:0 16px 34px #123b6517!important}
+body.ex-app :is(h1,h2,h3){letter-spacing:-.35px}body.ex-app .ex-content h1{font-weight:800!important}
+body.ex-app :is(input:not([type=checkbox]):not([type=radio]),select,textarea){background:#fff;border:1px solid #d4e0eb;border-radius:10px!important;min-height:40px;color:#213b54;padding:9px 12px;transition:border-color .15s,box-shadow .15s}
+body.ex-app textarea{min-height:90px;resize:vertical}body.ex-app :is(input,select,textarea):focus{outline:0!important;border-color:#4e94d1!important;box-shadow:0 0 0 3px #3c8ed524!important}
+body.ex-app :is(label){color:#526a82;font-weight:650}body.ex-app :is(button,.btn,[type=submit]){border-radius:9px;transition:filter .15s,transform .15s}body.ex-app :is(button,.btn,[type=submit]):not(:disabled):hover{filter:brightness(.96)}
+body.ex-app :is(a,button,input,select,textarea):focus-visible{outline:3px solid #70b0ef!important;outline-offset:2px}
+body.ex-app table{border-collapse:separate;border-spacing:0;width:100%}body.ex-app table thead th{background:#f3f7fb!important;color:#475569!important;border-bottom:1px solid #dce7f1!important;font-size:11px!important;letter-spacing:.35px;font-weight:800!important;white-space:nowrap}
+body.ex-app table tbody td{border-bottom:1px solid #edf2f7!important;color:#334a60}body.ex-app table tbody tr:hover{background:#f7faff!important}
+body.ex-app .ek-table-scroll{overflow-x:auto;max-width:100%;scrollbar-width:thin}body.ex-app .ek-table-scroll table{min-width:650px}body.ex-app .ek-table-scroll table :is(td,th){vertical-align:middle}
+body.ex-app .ek-page-utility{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 18px;padding:12px 15px;background:#fff;border:1px solid var(--next-border);border-radius:12px;box-shadow:0 3px 12px #17365607}
+body.ex-app .ek-page-utility span{font-size:12px;font-weight:750;color:#526f89;margin-right:auto}body.ex-app .ek-page-utility a{font-size:12px;font-weight:700;color:#1c609a;text-decoration:none;padding:7px 11px;border:1px solid #dce8f4;border-radius:8px;background:#f8fbfe}
+body.ex-app .ek-page-utility a:hover{background:#edf6ff}
+body.ex-app .ek-help{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border:1px solid #b8cadd;border-radius:50%;color:#6e8ba4;font-size:11px;cursor:help}
+body.ex-app .ek-sticky-actions{position:sticky;bottom:10px;z-index:5;background:#fffffff0;backdrop-filter:blur(12px);border:1px solid #dfe9f3;border-radius:12px;padding:10px;box-shadow:0 8px 30px #142f4c12}
+body.ex-app :is(.alert,.notice,.message){border-radius:10px!important}
+body.ex-app :is(.ex-table-scroll,.table-responsive,.table-wrap){overflow-x:auto}
+body.ex-app .ek-back-top{position:fixed;bottom:22px;right:22px;z-index:20;width:39px;height:39px;border:1px solid #d6e5f3;border-radius:12px;background:#fff;color:#215780;box-shadow:0 5px 17px #1a3c5e17;cursor:pointer;display:none}body.ex-app .ek-back-top.ek-show{display:block}
+body.ex-app .ek-shortcut-note{color:#8294a7;font-size:11px}
+@media(max-width:1100px){body.ex-app .ex-header-date{display:none!important}body.ex-app .ex-content{padding-left:20px!important;padding-right:20px!important}}
+@media(max-width:700px){body.ex-app .ex-content{padding:15px 12px 55px!important}body.ex-app .ex-header{min-height:65px!important}body.ex-app .ex-headings strong{font-size:16px!important}body.ex-app .ex-contextbar{align-items:stretch!important}body.ex-app .ex-context-actions{flex-wrap:wrap!important}body.ex-app .ex-context-actions :is(a,button){flex:0 1 auto}body.ex-app .ek-page-utility{padding:10px}body.ex-app .ek-page-utility span{width:100%}}
+@media(prefers-reduced-motion:reduce){body.ex-app *,body.ex-app *:before,body.ex-app *:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+body.ex-app .ex-sidebar-close{display:none;border:1px solid #8ba7c3;background:transparent;color:#fff;min-height:44px;border-radius:8px;margin:0 12px 8px;cursor:pointer}
+@media(max-width:850px){body.ex-app .ex-sidebar-close{display:block}}

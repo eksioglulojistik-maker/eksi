@@ -1,0 +1,89 @@
+/* EKŞİOĞLU — Stage 2 page component layer. All rules scoped to the application. */
+body.ek-design-v2 {
+ --ek-ink:#142a43; --ek-subtle:#475569; --ek-line:#dbe4ee;
+ --ek-panel:#ffffff; --ek-canvas:#f4f7fb; --ek-action:#1d4ed8;
+ --ek-shadow:0 2px 12px rgba(15,39,66,.055);
+ background:var(--ek-canvas);
+}
+body.ek-design-v2 .ex-content {color:var(--ek-ink);}
+body.ek-design-v2 .ex-content :is(h1,h2,h3,h4){letter-spacing:-.018em;overflow-wrap:anywhere;line-height:1.25;}
+body.ek-design-v2 .ex-content :is(p,li,dd){overflow-wrap:break-word;}
+body.ek-design-v2 .ex-content :is(.card,.ex-card,.ek-card,.panel,.ex-panel){
+ background-color:var(--ek-panel);border:1px solid var(--ek-line);box-shadow:var(--ek-shadow);
+}
+body.ek-design-v2 .ex-content :is(.card,.ex-card,.ek-card,.panel,.ex-panel) :is(p,small){line-height:1.55;}
+body.ek-design-v2 .ex-content :is(.ek-page-intro,.ek-workdesk-header,.ex-page-head,.page-header){
+ height:auto;min-height:0;max-width:100%;padding-block:18px;gap:12px;flex-wrap:wrap;
+}
+body.ek-design-v2 .ex-content :is(.ek-page-intro,.ek-workdesk-header,.ex-page-head,.page-header) :is(h1,p){margin-block:0 8px;}
+body.ek-design-v2 .ex-content :is(.ek-page-intro,.ek-workdesk-header,.ex-page-head,.page-header) :is(p,small){color:var(--ek-subtle);}
+body.ek-design-v2 .ex-content :is(.ex-table-wrap,.table-wrap,.table-responsive){width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+body.ek-design-v2 .ex-content table{border-collapse:separate;border-spacing:0;max-width:100%;}
+body.ek-design-v2 .ex-content table :is(th,td){vertical-align:middle;line-height:1.45;}
+body.ek-design-v2 .ex-content table th{font-weight:650;}
+body.ek-design-v2 .ex-content :is(input:not([type=checkbox]):not([type=radio]),select,textarea){min-height:40px;border-radius:8px;}
+body.ek-design-v2 .ex-content textarea{min-height:90px;resize:vertical;}
+body.ek-design-v2 .ex-content :is(button,input[type=submit],input[type=button]){cursor:pointer;}
+body.ek-design-v2 .ex-content :is(button,input[type=submit],input[type=button]):disabled{cursor:not-allowed;opacity:.65;}
+body.ek-design-v2 .ex-content :is(label){line-height:1.4;}
+body.ek-design-v2 .ex-nav a[aria-current=page]{font-weight:700;}
+body.ek-design-v2 .ex-contextbar{max-width:100%;flex-wrap:wrap;}
+body.ek-design-v2 .ex-content :is(.ex-welcome,.ek-dark-hero,.ek-workdesk-hero,.ek-banner-dark,.ek-hero-dark,.mv6-dochero) :is(h1,h2,h3){color:#f8fbff;}
+body.ek-design-v2 .ex-content :is(.ex-welcome,.ek-dark-hero,.ek-workdesk-hero,.ek-banner-dark,.ek-hero-dark,.mv6-dochero) :is(p,small){color:#dce8f8;}
+body.ek-design-v2 .ex-content :is(.ex-welcome,.ek-dark-hero,.ek-workdesk-hero,.ek-banner-dark,.ek-hero-dark,.mv6-dochero) a{color:#e2efff;}
+@media(max-width:1023px){body.ek-design-v2 .ex-content :is(.ex-table-wrap,.table-wrap,.table-responsive){border-radius:10px;}}
+@media(max-width:767px){
+ body.ek-design-v2 .ex-content :is(.ek-page-intro,.ek-workdesk-header,.ex-page-head,.page-header){padding:16px;}
+ body.ek-design-v2 .ex-content :is(.ek-page-intro,.ek-workdesk-header,.ex-page-head,.page-header) h1{font-size:clamp(1.3rem,5vw,1.85rem);}
+ body.ek-design-v2 .ex-content .ek-workdesk-header{flex-direction:column;flex-wrap:nowrap;align-items:stretch}
+ body.ek-design-v2 .ex-content .ek-workdesk-header>:first-child{flex:0 1 auto;width:100%}
+ body.ek-design-v2 .ex-content .ek-workdesk-header>.ek-action-primary{width:100%;min-height:46px;white-space:normal}
+ body.ek-design-v2 .ex-content :is(.ex-card,.ek-card,.card,.panel,.ex-panel){max-width:100%;}
+ body.ek-design-v2 .ex-content :is(input,select,textarea){font-size:16px;}
+}
+@media(prefers-reduced-motion:reduce){body.ek-design-v2 *,body.ek-design-v2 *::before,body.ek-design-v2 *::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important;}}
+@media print{body.ek-design-v2 .ex-content :is(.card,.ex-card,.ek-card,.panel,.ex-panel){box-shadow:none!important;}}
+
+/* EKŞİOĞLU stage 2: page layout consolidation. Scoped to migrated screens only. */
+.ex-content[data-page="customers.php"],.ex-content[data-page="quotes.php"],.ex-content[data-page="v11-documents.php"],.ex-content[data-page="v11-calendar.php"],.ex-content[data-page="v11-inventory.php"],.ex-content[data-page="payments.php"],.ex-content[data-page="receivables.php"],.ex-content[data-page="settings.php"]{padding-top:20px}
+.ex-content[data-page="customers.php"] .crm-title,.ex-content[data-page="quotes.php"] .eq-heading,.ex-content[data-page="v11-documents.php"] .ec-heading,.ex-content[data-page="payments.php"] .ek2-header{margin-top:0}
+.ex-content[data-page="quotes.php"] .eq-heading{padding-top:0;padding-bottom:12px}
+.ex-content[data-page="quotes.php"] .eq-heading h1{margin-top:0}
+.ex-content[data-page="v11-inventory.php"] .v11-head{margin-top:0}
+.ex-content[data-page="customers.php"] .crm-eyebrow,.ex-content[data-page="quotes.php"] .eq-eyebrow{letter-spacing:.04em}
+.ex-content[data-page="v11-inventory.php"] .v11-head p{color:#475569}
+.ex-content[data-page="customers.php"] .crm-title,.ex-content[data-page="quotes.php"] .eq-heading{gap:12px}
+@media(max-width:768px){.ex-content[data-page="customers.php"] .crm-title,.ex-content[data-page="quotes.php"] .eq-heading,.ex-content[data-page="v11-documents.php"] .ec-heading{display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px}.ex-content[data-page="customers.php"] .crm-title>*{min-width:0}.ex-content[data-page="customers.php"] .crm-title h1,.ex-content[data-page="quotes.php"] .eq-heading h1{font-size:clamp(1.4rem,5vw,2rem)}}
+
+/* 3.3.7: compact migrated list headers and remove redundant context spacing. */
+.ex-content[data-page="customers.php"] .crm-title,.ex-content[data-page="quotes.php"] .eq-heading{margin-bottom:14px}
+.ex-content[data-page="customers.php"] .crm-title h1,.ex-content[data-page="quotes.php"] .eq-heading h1{line-height:1.15}
+.ex-content[data-page="customers.php"] .crm-stats{margin-bottom:16px}
+.ex-content[data-page="quotes.php"] .eq-metrics{margin-bottom:12px}
+@media(max-width:700px){.ex-content[data-page="customers.php"] .crm-title,.ex-content[data-page="quotes.php"] .eq-heading{align-items:stretch}.ex-content[data-page="customers.php"] .crm-primary,.ex-content[data-page="quotes.php"] .eq-top-actions{max-width:100%}}
+
+/* Native summary component: hides optional statistics, never primary actions. */
+body.ek-design-v2 .ex-content .ek-summary{margin:0 0 16px;border:1px solid var(--ek-line);border-radius:10px;background:var(--ek-panel);padding:0 16px}
+body.ek-design-v2 .ex-content .ek-summary>summary{padding:12px 0;color:var(--ek-ink);font-weight:650;cursor:pointer;min-height:44px}
+body.ek-design-v2 .ex-content .ek-summary[open]>summary{margin-bottom:12px;border-bottom:1px solid var(--ek-line)}
+body.ek-design-v2 .ex-content .ek-summary>summary:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+body.ek-design-v2 .ex-content .ek-summary .cards,body.ek-design-v2 .ex-content .ek-summary .crm-stats,body.ek-design-v2 .ex-content .ek-summary .eq-metrics{margin-bottom:12px}
+
+/* Single deletion confirmation: native focus containment, responsive width. */
+.ek-delete-dialog{width:min(680px,calc(100% - 32px));max-height:calc(100dvh - 32px);padding:0;border:1px solid #d5e1ee;border-radius:18px;color:#142e53;background:#fff;overflow:auto;box-shadow:0 24px 80px #0c203540}
+.ek-delete-dialog::backdrop{background:#0b1e35a8}
+.ek-delete-dialog .ek-delete-confirm{margin:0;padding:24px;border:0;overflow-wrap:anywhere;box-shadow:none}
+.ek-delete-confirm form{margin:16px 0}.ek-delete-confirm button{background:#193d68;color:#fff;min-height:44px}.ek-delete-confirm a{color:#185a93}
+
+@media (max-width: 760px) {
+  .ek-row-actions { overflow-x: auto; }
+  .ek-row-actions table th:last-child,
+  .ek-row-actions table td:last-child {
+    position: sticky;
+    right: 0;
+    z-index: 1;
+    background-color: #f8fafc;
+    box-shadow: -1px 0 #dbe4ef;
+  }
+  .ek-row-actions .eq-actions { max-width: 8rem; flex-wrap: wrap; }
+}

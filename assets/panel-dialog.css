@@ -1,0 +1,27 @@
+#ek-panel-dialog{position:fixed;inset:0;margin:auto;width:calc(100% - 32px);max-width:480px;max-height:calc(100dvh - 32px);overflow:auto;border:1px solid #dde7f1;border-radius:20px;padding:0;background:#fff;color:#163553;box-shadow:0 24px 85px #0b1e3d45;font:14px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif;z-index:2147483646;box-sizing:border-box;text-align:left}
+#ek-panel-dialog:not([open]){display:none!important}
+#ek-panel-dialog::backdrop{background:#0a1c36a8;backdrop-filter:blur(5px)}
+#ek-panel-dialog *{box-sizing:border-box}
+#ek-panel-dialog .ek-dialog-header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #edf2f7;background:#f8fbff}
+#ek-panel-dialog .ek-dialog-brand{color:#2c5f8e;font-size:10px;font-weight:750;letter-spacing:.12em}
+#ek-panel-dialog .ek-dialog-close{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;min-width:36px;border:0;border-radius:10px;background:#eef3f9;color:#71869b;font-size:25px;font-weight:400;padding:0;cursor:pointer;box-shadow:none}
+#ek-panel-dialog .ek-dialog-content{display:flex;gap:16px;align-items:flex-start;padding:25px 24px 27px}
+#ek-panel-dialog .ek-dialog-icon{display:inline-flex;flex:0 0 44px;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid #cfe1f2;border-radius:14px;background:#edf5fd;color:#2c6b9f;font-size:24px;font-weight:650}
+#ek-panel-dialog[data-tone=danger] .ek-dialog-icon{color:#b73c50;border-color:#f3dce1;background:#fff0f3}
+#ek-panel-dialog .ek-dialog-copy{min-width:0;flex:1}
+#ek-panel-dialog #ek-dialog-title{margin:1px 0 10px;color:#163553;font-size:21px;font-weight:700;line-height:1.35;letter-spacing:-.025em;text-transform:none}
+#ek-panel-dialog #ek-dialog-message{margin:0;color:#61768b;font-size:14px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}
+#ek-panel-dialog .ek-dialog-footer{display:flex;justify-content:flex-end;gap:10px;padding:16px 24px;border-top:1px solid #edf2f7;background:#fbfcfe}
+#ek-panel-dialog .ek-dialog-footer button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;min-width:105px;padding:11px 18px;border-radius:10px;font:650 13px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif;cursor:pointer;box-shadow:none;white-space:normal}
+#ek-panel-dialog .ek-dialog-cancel{background:#fff;color:#49647f;border:1px solid #d5e1ed}
+#ek-panel-dialog .ek-dialog-confirm{background:#205789;color:#fff;border:1px solid #205789}
+#ek-panel-dialog[data-tone=danger] .ek-dialog-confirm{background:#b83e51;border-color:#b83e51}
+#ek-panel-dialog button:hover{filter:brightness(.96)}
+#ek-panel-dialog button:focus-visible{outline:3px solid #a9cbed;outline-offset:3px}
+.ek-dialog-overlay{position:fixed;inset:0;background:#0a1c36a8;backdrop-filter:blur(5px);z-index:2147483645}
+@media(max-width:480px){#ek-panel-dialog .ek-dialog-header{padding:12px 16px}#ek-panel-dialog .ek-dialog-content{padding:22px 18px;gap:12px}#ek-panel-dialog #ek-dialog-title{font-size:19px}#ek-panel-dialog .ek-dialog-footer{padding:14px 18px}#ek-panel-dialog .ek-dialog-footer button{flex:1;min-width:0}#ek-panel-dialog .ek-dialog-close{min-height:44px;min-width:44px}#ek-panel-dialog .ek-dialog-icon{width:38px;height:38px;flex-basis:38px;border-radius:12px;font-size:21px}}
+
+#ek-panel-dialog [hidden]{display:none!important}
+#ek-panel-dialog[open]{animation:ek-dialog-enter .16s ease-out}
+@keyframes ek-dialog-enter{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){#ek-panel-dialog[open]{animation:none}}

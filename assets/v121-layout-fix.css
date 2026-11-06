@@ -1,0 +1,22 @@
+/* EKŞİOĞLU v12.1 - targeted fix for screenshot: clipped page / overlapping sidebar / duplicate brand */
+html{overflow-x:hidden}html,body.ex-app{width:100%;max-width:100%;margin:0!important;padding:0!important}
+body.ex-app{display:block!important;overflow-x:hidden!important}
+body.ex-app .ex-sidebar{position:fixed!important;top:0!important;left:0!important;bottom:0!important;right:auto!important;width:252px!important;max-width:252px!important;margin:0!important;transform:none;box-sizing:border-box!important;z-index:1100!important;overflow-y:auto;overflow-x:hidden}
+body.ex-app .ex-shell{display:block!important;position:relative!important;width:calc(100% - 252px)!important;max-width:none!important;min-width:0!important;margin:0 0 0 252px!important;padding:0!important;left:auto!important;right:auto!important;transform:none!important;box-sizing:border-box!important;overflow:visible!important}
+body.ex-app .ex-header{position:relative!important;left:auto!important;width:100%!important;max-width:100%!important;box-sizing:border-box!important;min-width:0!important}
+body.ex-app .ex-content{display:block!important;position:relative!important;left:auto!important;width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;padding:0 28px 36px!important;box-sizing:border-box!important;overflow:visible!important}
+body.ex-app .ex-dashboard,body.ex-app .ex-welcome,body.ex-app .ex-stats,body.ex-app .ex-dash-columns,body.ex-app .ex-panel{min-width:0!important;max-width:100%!important}
+body.ex-app .ex-contextbar[hidden]{display:none!important}
+
+
+
+
+
+body.ex-app .ex-welcome{margin-top:20px!important}
+body.ex-app .ex-header-left{min-width:0!important}
+body.ex-app .ex-headings{min-width:0!important}
+body.ex-app .ex-headings strong{overflow-wrap:anywhere}
+body.ex-app .ex-table-scroll{max-width:100%!important;overflow-x:auto!important}
+@media(max-width:850px){body.ex-app .ex-sidebar{width:252px!important;max-width:252px!important;transform:translateX(-105%)!important}body.ex-app.ex-menu-open .ex-sidebar{transform:translateX(0)!important}body.ex-app .ex-shell{width:100%!important;margin-left:0!important}body.ex-app .ex-content{padding:0 16px 28px!important}}
+@media(max-width:550px){body.ex-app .ex-content{padding:0 12px 22px!important}body.ex-app .ex-welcome{margin-top:12px!important}body.ex-app .ex-header{padding:0 12px!important}}
+@media print{body.ex-app .ex-sidebar{display:none!important}body.ex-app .ex-shell{width:100%!important;margin:0!important}body.ex-app .ex-header{display:none!important}}

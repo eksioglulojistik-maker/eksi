@@ -1,0 +1,2 @@
+/* v3.2.8: removed global color overrides that conflicted with buttons and dark surfaces */
+body.ex-app .ex-content :is(h1,h2,h3){overflow-wrap:anywhere}
