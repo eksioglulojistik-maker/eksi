@@ -1,0 +1,9 @@
+/* EKŞİOĞLU v3.3.2 — navigation consolidation and accessibility, incremental release */
+body.ex-app .ex-nav{display:flex;flex-direction:column;gap:5px}
+body.ex-app .ex-nav>a{min-height:46px;display:flex;align-items:center;gap:12px;border-radius:10px}
+body.ex-app .ex-nav>a:focus-visible,body.ex-app .ex-header a:focus-visible,body.ex-app .ex-header button:focus-visible{outline:3px solid #93c5fd;outline-offset:2px}
+body.ex-app .ex-content{min-width:0}
+body.ex-app .ex-contextbar{flex-wrap:wrap;gap:12px}
+body.ex-app .ex-context-left,body.ex-app .ex-context-actions{min-width:0;flex-wrap:wrap}
+body.ex-app .ex-nav .ex-nav-icon{flex:0 0 24px;text-align:center}
+@media(max-width:767px){body.ex-app .ex-contextbar{padding-inline:12px}body.ex-app .ex-header-right .ex-header-date{display:none}}

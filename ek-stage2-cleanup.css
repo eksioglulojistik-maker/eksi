@@ -1,0 +1,17 @@
+/* EKŞİOĞLU stage 2: page layout consolidation. Scoped to migrated screens only. */
+.ex-content[data-page="customers.php"],.ex-content[data-page="quotes.php"],.ex-content[data-page="v11-documents.php"],.ex-content[data-page="v11-calendar.php"],.ex-content[data-page="v11-inventory.php"],.ex-content[data-page="payments.php"],.ex-content[data-page="receivables.php"],.ex-content[data-page="settings.php"]{padding-top:20px}
+.ex-content[data-page="customers.php"] .crm-title,.ex-content[data-page="quotes.php"] .eq-heading,.ex-content[data-page="v11-documents.php"] .ec-heading,.ex-content[data-page="payments.php"] .ek2-header{margin-top:0}
+.ex-content[data-page="quotes.php"] .eq-heading{padding-top:0;padding-bottom:12px}
+.ex-content[data-page="quotes.php"] .eq-heading h1{margin-top:0}
+.ex-content[data-page="v11-inventory.php"] .v11-head{margin-top:0}
+.ex-content[data-page="customers.php"] .crm-eyebrow,.ex-content[data-page="quotes.php"] .eq-eyebrow{letter-spacing:.04em}
+.ex-content[data-page="v11-inventory.php"] .v11-head p{color:#475569}
+.ex-content[data-page="customers.php"] .crm-title,.ex-content[data-page="quotes.php"] .eq-heading{gap:12px}
+@media(max-width:768px){.ex-content[data-page="customers.php"] .crm-title,.ex-content[data-page="quotes.php"] .eq-heading,.ex-content[data-page="v11-documents.php"] .ec-heading{display:flex;flex-wrap:wrap;align-items:flex-start;gap:12px}.ex-content[data-page="customers.php"] .crm-title>*{min-width:0}.ex-content[data-page="customers.php"] .crm-title h1,.ex-content[data-page="quotes.php"] .eq-heading h1{font-size:clamp(1.4rem,5vw,2rem)}}
+
+/* 3.3.7: compact migrated list headers and remove redundant context spacing. */
+.ex-content[data-page="customers.php"] .crm-title,.ex-content[data-page="quotes.php"] .eq-heading{margin-bottom:14px}
+.ex-content[data-page="customers.php"] .crm-title h1,.ex-content[data-page="quotes.php"] .eq-heading h1{line-height:1.15}
+.ex-content[data-page="customers.php"] .crm-stats{margin-bottom:16px}
+.ex-content[data-page="quotes.php"] .eq-metrics{margin-bottom:12px}
+@media(max-width:700px){.ex-content[data-page="customers.php"] .crm-title,.ex-content[data-page="quotes.php"] .eq-heading{align-items:stretch}.ex-content[data-page="customers.php"] .crm-primary,.ex-content[data-page="quotes.php"] .eq-top-actions{max-width:100%}}

@@ -1,0 +1,8 @@
+<?php
+require __DIR__.'/inc/core.php';auth();if(!ekAdmin()){http_response_code(403);exit('Yönetici yetkisi gerekir.');}
+$ok='';$err='';
+if($_SERVER['REQUEST_METHOD']==='POST'){
+ verify();
+ try{db()->exec("CREATE TABLE IF NOT EXISTS ek_notifications (id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY, recipient_id INT NOT NULL, quote_id INT NULL, event_type VARCHAR(40) NOT NULL, title VARCHAR(190) NOT NULL, body VARCHAR(500) NOT NULL, created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, read_at DATETIME NULL, deleted_at DATETIME NULL, INDEX idx_recipient_read (recipient_id,read_at,id), INDEX idx_quote (quote_id)) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4");$columns=db()->query("SHOW COLUMNS FROM ek_notifications LIKE 'deleted_at'")->fetchAll();if(!$columns)db()->exec("ALTER TABLE ek_notifications ADD COLUMN deleted_at DATETIME NULL DEFAULT NULL");$ok='Bildirim tablosu hazır. Mevcut kayıtlar değiştirilmedi.';}catch(Throwable $e){error_log('Notification setup: '.$e->getMessage());$err='Kurulum tamamlanamadı. Veritabanı yetkilerini kontrol edin.';}
+}
+require __DIR__.'/inc/layout.php';top('Bildirim Kurulumu');?><div style="max-width:740px;margin:20px auto;background:#fff;border:1px solid #dce5ef;padding:26px;border-radius:16px"><h1>Bildirim Sistemi Kurulumu</h1><p>Bu işlem yalnızca eksik bildirim tablosunu oluşturur; müşteri ve teklif kayıtlarını değiştirmez.</p><?php if($ok):?><p style="color:#166534"><?=h($ok)?></p><?php endif;?><?php if($err):?><p style="color:#b91c1c"><?=h($err)?></p><?php endif;?><form method="post"><input type="hidden" name="csrf" value="<?=h(csrf())?>"><button type="submit">Bildirim Sistemini Hazırla</button></form><p><a href="notifications.php">Bildirim Merkezine Dön</a></p></div><?php bottom(); ?>

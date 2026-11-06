@@ -1,0 +1,13 @@
+<?php
+require __DIR__.'/inc/core.php';auth();require __DIR__.'/inc/layout.php';
+$pdo=db();$term=trim((string)($_GET['q']??''));$term=mb_substr($term,0,80);$customers=[];$quotes=[];$errors=[];
+if($term!==''){
+ $like='%'.$term.'%';
+ try{$st=$pdo->prepare("SELECT id,name,company,email,phone FROM customers WHERE name LIKE ? OR company LIKE ? OR email LIKE ? OR phone LIKE ? ORDER BY id DESC LIMIT 30");$st->execute([$like,$like,$like,$like]);$customers=$st->fetchAll(PDO::FETCH_ASSOC);}catch(Throwable $e){$errors[]='Müşteri araması yapılamadı.';}
+ try{$st=$pdo->prepare("SELECT q.id,q.quote_no,q.status,q.origin,q.destination,c.name FROM quotes q LEFT JOIN customers c ON c.id=q.customer_id WHERE q.quote_no LIKE ? OR q.origin LIKE ? OR q.destination LIKE ? OR c.name LIKE ? ORDER BY q.id DESC LIMIT 30");$st->execute([$like,$like,$like,$like]);$quotes=$st->fetchAll(PDO::FETCH_ASSOC);}catch(Throwable $e){$errors[]='Teklif araması yapılamadı.';}
+}
+top('Genel Arama'); ?>
+<section class="ek-workdesk"><header class="ek-workdesk-header"><div><span class="ek-kicker">HIZLI ERİŞİM</span><h1>Genel arama</h1><p>Müşteri adı, telefon, e-posta, teklif numarası veya güzergâha göre arayın.</p></div></header>
+<form action="global-search.php" method="get" class="ek-global-search"><label for="ek-query">Aranacak kelime</label><div><input id="ek-query" name="q" type="search" value="<?=h($term)?>" placeholder="Örn. müşteri adı, 26-1001, Almanya" maxlength="80" autofocus><button type="submit">Ara</button></div></form>
+<?php if($term!==''):?><div class="ek-search-columns"><section class="ek-workdesk-panel"><h2>Müşteriler <small>(<?=count($customers)?>)</small></h2><?php foreach($customers as $r):?><a class="ek-result" href="customer-detail.php?id=<?=(int)$r['id']?>"><strong><?=h($r['name'])?></strong><small><?=h(($r['company']??'').' · '.($r['phone']??'').' · '.($r['email']??''))?></small></a><?php endforeach;?><?php if(!$customers):?><p>Sonuç bulunamadı.</p><?php endif;?></section><section class="ek-workdesk-panel"><h2>Teklifler <small>(<?=count($quotes)?>)</small></h2><?php foreach($quotes as $r):?><a class="ek-result" href="view.php?id=<?=(int)$r['id']?>"><strong><?=h($r['quote_no'])?> · <?=h($r['name']??'—')?></strong><small><?=h(($r['origin']??'').' → '.($r['destination']??'').' · '.(function_exists('statusText')?statusText($r['status']):$r['status']))?></small></a><?php endforeach;?><?php if(!$quotes):?><p>Sonuç bulunamadı.</p><?php endif;?></section></div><?php endif;?>
+<?php if($errors):?><p class="ek-soft-warning"><?=h(implode(' ',$errors))?></p><?php endif;?></section><?php bottom(); ?>

@@ -1,0 +1,40 @@
+/* v3.3.1 — specific corrections grounded in live preliminary audit */
+body.ex-app .ex-content :is(.ek-workdesk-header,.ek-page-intro){
+  box-sizing:border-box;
+  height:auto!important;
+  min-height:108px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:22px 28px;
+}
+body.ex-app .ex-content :is(.ek-workdesk-header,.ek-page-intro)>:first-child{
+  flex:1 1 300px;
+  min-width:0;
+}
+body.ex-app .ex-content :is(.ek-workdesk-header,.ek-page-intro) p{
+  margin:6px 0 0;
+  line-height:1.55;
+  white-space:normal;
+}
+body.ex-app .ex-content :is(.ek-workdesk-header,.ek-page-intro) h1{
+  margin:4px 0 0;
+  line-height:1.18;
+  overflow-wrap:break-word;
+}
+body.ex-app .ex-content :is(.ex-welcome,.ek-dark-hero,.ek-workdesk-hero,.ek-banner-dark,.ek-hero-dark,.mv6-dochero) h1{
+  color:#f5f9ff!important;
+}
+body.ex-app .ex-content :is(.ex-welcome,.ek-dark-hero,.ek-workdesk-hero,.ek-banner-dark,.ek-hero-dark,.mv6-dochero) > p{
+  color:#d6e5f6!important;
+}
+@media(max-width:720px){
+ body.ex-app .ex-content :is(.ek-workdesk-header,.ek-page-intro){
+   padding:18px!important;align-items:stretch;flex-wrap:nowrap;
+ }
+ body.ex-app .ex-content :is(.ek-workdesk-header,.ek-page-intro)>:first-child{
+   flex:0 1 auto;width:100%;
+ }
+}
